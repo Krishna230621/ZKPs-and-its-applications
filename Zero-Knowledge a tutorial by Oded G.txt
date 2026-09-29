@@ -1,0 +1,26 @@
+Zero-Knowledge: a tutorial by Oded Goldreich
+
+Zero-Knowledge proofs are fascinating and extremely useful constructs. Their fascinating nature is due to their seemingly contradictory definition; zero-knowledge proofs are both convincing and yet yield nothing beyond the validity of the assertion being proven. Their applicability in the domain of cryptography is vast; they are typically used to force malicious parties to behave according to a predetermined protocol. In addition to their direct applicability in Cryptography, zero-knowledge proofs serve as a good bench-mark for the study of various problems regarding cryptographic protocols (e.g., ``secure composition of protocols'' and the ``use of the adversary's program within the proof of security'').
+
+In this tutorial we will present the basic definitions and results regarding zero-knowledge as well as some recent developments regarding this notion.
+
+The Basics
+Loosely speaking, zero-knowledge proofs are proofs that yield nothing beyond the validity of the assertion. That is, a verifier obtaining such a proof only gains conviction in the validity of the assertion. This is formulated by saying that anything that is feasibly computable from a zero-knowledge proof is also feasibly computable from the (valid) assertion itself (by a so-called simulator). Variants on the basic definition include:
+Consideration of auxiliary inputs.
+Universal and black-box simulations.
+Restricting attention to honest verifiers.
+The level of similarity required of the simulation.
+It is well-known that zero-knowledge proofs exist for any NP-set, provided that one-way functions exist. This result is a powerful tool in the design of cryptographic protocols, because it enables to force parties to behave according to a predetermined protocol (i.e., the protocol requires parties to provide zero-knowledge proofs of the correctness of their secret-based actions, without revealing these secrets).
+Advanced Topics
+We focus on two basic problems regarding zero-knowledge, which actually arise also with respect to the security of other cryptographic primitives. The first question refers to the preservation of security (i.e., zero-knowledge in our case) under various types of composition operations. We survey the known results regarding sequential, parallel and concurrent execution of (arbitrary and/or specific) zero-knowledge protocols. The main facts are:
+Zero-knowledge (w.r.t auxiliary inputs) is closed under sequential composition.
+In general, zero-knowledge is not closed under parallel composition. Yet, some zero-knowledge proofs (for NP) preserve their security when many copies are executed in parallel. Furthermore, some of these protocol use a constant number of rounds.
+Some zero-knowledge proofs (for NP) preserve their security when many copies are executed concurrently, but such a result is not known for constant-round protocols.
+The second basic question regarding zero-knowledge refers to the usage of the adversary's program within the proof of security (i.e., demonstration of the zero-knowledge property). For 15 years, all known proofs of security used the adversary's program as a black-box (i.e., a universal simulator was presented using the adversary's program as an oracle). Furthermore, it was believed that there is no advantage in having access to the code of the adversary's program. Consequently it was conjectured that negative results regarding black-box simulation represent an inherent limitation of zero-knowledge. This belief has been refuted recently by a zero-knowledge argument (for NP) that has important properties that are unachievable by black-box simulation.
+Other topics treated in the full version of the tutorial (but not in its oral presentation) include proofs of knowledge, Non-Interactive Zero-Knowledge proofs, Statistical Zero-Knowledge, Knowledge Complexity, and the reset ability of a party's random-tape.
+
+Material Available On-Line
+A preliminary version, July 2002.
+Revised October 2002, December 2002, March 2004, March 2010,
+
+Back to Oded Goldreich's homepage or to the full list of papers
